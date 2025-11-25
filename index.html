@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Graft & Political Dynasty</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+h1 { text-align: center; }
+.quiz-container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+.question { margin-bottom: 15px; }
+.options label { display: block; margin: 5px 0; cursor: pointer; }
+button { margin: 10px 5px; padding: 10px 15px; cursor: pointer; }
+#editor-btn { font-size: 12px; position: fixed; top: 10px; right: 10px; }
+#editor-area { display:none; margin-top: 20px; border:1px solid #ccc; padding:10px; }
+footer { text-align: center; margin-top: 20px; font-size: 12px; color: #555; }
+</style>
+</head>
+<body>
+<h1>Quiz: Graft, Corruption & Political Dynasty</h1>
+<div class="quiz-container" id="quiz">
+  <div class="question" data-answer="RA3019">
+    <p>1. Alin sa mga sumusunod ang Anti-Graft Law?</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="RA3019"> RA 3019</label>
+      <label><input type="radio" name="q1" value="RA1379"> RA 1379</label>
+      <label><input type="radio" name="q1" value="RA6713"> RA 6713</label>
+    </div>
+  </div>
+  <div class="question" data-answer="RA1379">
+    <p>2. Batas para sa pagkumpiska ng illegal na yaman?</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="RA3019"> RA 3019</label>
+      <label><input type="radio" name="q2" value="RA1379"> RA 1379</label>
+      <label><input type="radio" name="q2" value="RA6713"> RA 6713</label>
+    </div>
+  </div>
+  <div class="question" data-answer="RA6713">
+    <p>3. Batas sa Code of Conduct at Ethical Standards ng public officials?</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="RA3019"> RA 3019</label>
+      <label><input type="radio" name="q3" value="RA1379"> RA 1379</label>
+      <label><input type="radio" name="q3" value="RA6713"> RA 6713</label>
+    </div>
+  </div>
+  <div class="question" data-answer="Simultaneous">
+    <p>4. Kapag dalawa o higit pang miyembro ng pamilya ay kasalukuyang humahawak ng posisyon sa pamahalaan, tawag dito?</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="Simultaneous"> Simultaneous Dynasty</label>
+      <label><input type="radio" name="q4" value="Sequential"> Successive Dynasty</label>
+      <label><input type="radio" name="q4" value="Mixed"> Mixed Dynasty</label>
+    </div>
+  </div>
+  <button id="score-btn">Ipakita ang Score</button>
+  <button id="try-btn" style="display:none;">Try Again</button>
+</div>
+
+<button id="editor-btn">Editor 🔒</button>
+<div id="editor-area">
+<h3>Editor Mode (Password: jg12)</h3>
+<textarea id="editor-content" rows="10" style="width:100%;"></textarea>
+<button id="save-editor">Save</button>
+</div>
+
+<footer>[Experimental lang po ito for exams^^ -Nov/20/2025]</footer>
+
+<script>
+const scoreBtn = document.getElementById('score-btn');
+const tryBtn = document.getElementById('try-btn');
+
+scoreBtn.onclick = function() {
+  let questions = document.querySelectorAll('.question');
+  let score = 0;
+  questions.forEach(q => {
+    let selected = q.querySelector('input[type=radio]:checked');
+    if(selected && selected.value === q.dataset.answer){
+      score++;
+    }
+  });
+  alert('Score mo: ' + score + '/' + questions.length);
+  tryBtn.style.display = 'inline';
+}
+
+tryBtn.onclick = function() {
+  document.querySelectorAll('input[type=radio]').forEach(i => i.checked = false);
+  tryBtn.style.display = 'none';
+}
+
+// Editor logic
+const editorBtn = document.getElementById('editor-btn');
+const editorArea = document.getElementById('editor-area');
+const saveBtn = document.getElementById('save-editor');
+const editorContent = document.getElementById('editor-content');
+
+editorBtn.onclick = function(){
+  let pwd = prompt("Enter editor password:");
+  if(pwd === "jg12"){
+    editorArea.style.display = editorArea.style.display === "none" ? "block" : "none";
+  } else {
+    alert("Wrong password!");
+  }
+}
+
+saveBtn.onclick = function(){
+  alert("Editor save functionality is simulated. Changes will not persist on GitHub Pages.");
+}
+</script>
+</body>
+</html>
