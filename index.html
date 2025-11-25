@@ -1,50 +1,180 @@
-<script>
-const scoreBtn = document.getElementById('score-btn');
-const tryBtn = document.getElementById('try-btn');
-
-scoreBtn.onclick = function() {
-  let questions = document.querySelectorAll('.question');
-  let score = 0;
-  questions.forEach(q => {
-    let selected = q.querySelector('input[type=radio]:checked');
-    let options = q.querySelectorAll('input[type=radio]');
-    options.forEach(opt => {
-      let label = opt.parentElement;
-      if(opt.value === q.dataset.answer){
-        label.style.background = "#c8e6c9"; // Green for correct
-      } else if(opt.checked){
-        label.style.background = "#ffcdd2"; // Red for wrong
-      }
-    });
-    if(selected && selected.value === q.dataset.answer){
-      score++;
-    }
-  });
-  alert('Score mo: ' + score + '/' + questions.length);
-  tryBtn.style.display = 'inline';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graft & Political Dynasty Quiz</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f2f2f2;
 }
-
-tryBtn.onclick = function() {
-  document.querySelectorAll('input[type=radio]').forEach(i => i.checked = false);
-  document.querySelectorAll('.options label').forEach(label => label.style.background = "none");
-  tryBtn.style.display = 'none';
+h1, h2 {
+    text-align: center;
 }
-
-// Editor logic
-const editorBtn = document.getElementById('editor-btn');
-const editorArea = document.getElementById('editor-area');
-const saveBtn = document.getElementById('save-editor');
-
-editorBtn.onclick = function(){
-  let pwd = prompt("Enter editor password:");
-  if(pwd === "jg12"){
-    editorArea.style.display = editorArea.style.display === "none" ? "block" : "none";
-  } else {
-    alert("Wrong password!");
-  }
+.quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
-
-saveBtn.onclick = function(){
-  alert("Editor save functionality is simulated. Changes will not persist on GitHub Pages.");
+.question {
+    margin-bottom: 20px;
 }
-</script>
+.options label {
+    display: block;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#answer-key {
+    display: none;
+    margin-top: 20px;
+    border-top:1px solid #ccc;
+    padding-top:10px;
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+}
+#editor-area {
+    display:none;
+    margin-top: 20px;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+}
+</style>
+</head>
+<body>
+<h1>Graft & Political Dynasty Quiz</h1>
+<div class="quiz-container">
+    <!-- Sample Question Structure -->
+    <div class="question" data-answer="RA 7080">
+        <p>1. The Plunder Law</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="RA 7080"> A. RA 7080</label>
+            <label><input type="radio" name="q1" value="RA 6713"> B. RA 6713</label>
+            <label><input type="radio" name="q1" value="RA 7659"> C. RA 7659</label>
+            <label><input type="radio" name="q1" value="RA 9160"> D. RA 9160</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 3019">
+        <p>2. Anti-Graft and Corrupt Practices Act</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="RA 3019"> A. RA 3019</label>
+            <label><input type="radio" name="q2" value="RA 7080"> B. RA 7080</label>
+            <label><input type="radio" name="q2" value="RA 6713"> C. RA 6713</label>
+            <label><input type="radio" name="q2" value="RA 9160"> D. RA 9160</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 6713">
+        <p>3. Code of Conduct and Ethical Standards for Public Officials and Employees</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="RA 6713"> A. RA 6713</label>
+            <label><input type="radio" name="q3" value="RA 7080"> B. RA 7080</label>
+            <label><input type="radio" name="q3" value="RA 3019"> C. RA 3019</label>
+            <label><input type="radio" name="q3" value="RA 9160"> D. RA 9160</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 1379">
+        <p>4. Pagkumpiska ng yamang ilegal</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="RA 1379"> A. RA 1379</label>
+            <label><input type="radio" name="q4" value="RA 3019"> B. RA 3019</label>
+            <label><input type="radio" name="q4" value="RA 7080"> C. RA 7080</label>
+            <label><input type="radio" name="q4" value="RA 6713"> D. RA 6713</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 7659">
+        <p>5. The Heinous Crime Law</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="RA 7659"> A. RA 7659</label>
+            <label><input type="radio" name="q5" value="RA 7080"> B. RA 7080</label>
+            <label><input type="radio" name="q5" value="RA 3019"> C. RA 3019</label>
+            <label><input type="radio" name="q5" value="RA 6713"> D. RA 6713</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 9160">
+        <p>6. Anti-Money Laundering Law</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="RA 9160"> A. RA 9160</label>
+            <label><input type="radio" name="q6" value="RA 7080"> B. RA 7080</label>
+            <label><input type="radio" name="q6" value="RA 3019"> C. RA 3019</label>
+            <label><input type="radio" name="q6" value="RA 6713"> D. RA 6713</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="PD 46">
+        <p>7. Gift-Giving Decree</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="PD 46"> A. PD 46</label>
+            <label><input type="radio" name="q7" value="PD 749"> B. PD 749</label>
+            <label><input type="radio" name="q7" value="RA 3019"> C. RA 3019</label>
+            <label><input type="radio" name="q7" value="RA 6770"> D. RA 6770</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="PD 749">
+        <p>8. Immunity for Informants</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="PD 749"> A. PD 749</label>
+            <label><input type="radio" name="q8" value="PD 46"> B. PD 46</label>
+            <label><input type="radio" name="q8" value="RA 3019"> C. RA 3019</label>
+            <label><input type="radio" name="q8" value="RA 6770"> D. RA 6770</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="RA 6770">
+        <p>9. Ombudsman Act</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="RA 6770"> A. RA 6770</label>
+            <label><input type="radio" name="q9" value="RA 3019"> B. RA 3019</label>
+            <label><input type="radio" name="q9" value="PD 46"> C. PD 46</label>
+            <label><input type="radio" name="q9" value="PD 749"> D. PD 749</label>
+        </div>
+    </div>
+
+    <!-- More questions about terms and definitions can be added similarly -->
+
+    <button id="score-btn">Ipakita ang Score</button>
+    <button id="try-btn" style="display:none;">Try Again</button>
+    <button id="editor-btn">Editor</button>
+
+    <div id="editor-area">
+        <h3>Editor (Password Protected)</h3>
+        <textarea placeholder="Add more questions here..."></textarea>
+        <button id="save-editor">Save Changes</button>
+    </div>
+</div>
+
+<div id="answer-key">
+    <h3>Answer Key:</h3>
+    <ol>
+        <li>RA 7080</li>
+        <li>RA 3019</li>
+        <li>RA 6713</li>
+        <li>RA 1379</li>
+        <li>RA 7659</li>
+        <li>RA 9160</li>
+        <li>PD 46</li>
+        <li>PD 749</li>
+        <li>RA 6770</li>
+        <!-- Extend this list for all questions -->
+    </ol>
+</div>
+
+<foote
