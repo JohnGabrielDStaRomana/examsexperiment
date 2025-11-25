@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Laws & Terms</title>
+<style>
+body { font-family: Arial, sans-serif; background:#f0f0f0; padding:20px; }
+h1 { text-align:center; }
+.quiz-container { max-width:900px; margin:auto; background:#fff; padding:20px; border-radius:8px; }
+.question { margin-bottom:15px; }
+.options label { display:block; margin:5px 0; cursor:pointer; }
+button { margin:10px 5px; padding:10px 15px; cursor:pointer; }
+#editor-btn { font-size:12px; position:fixed; top:10px; right:10px; }
+#editor-area { display:none; margin-top:20px; border:1px solid #ccc; padding:10px; }
+footer { text-align:center; margin-top:20px; font-size:12px; color:#555; }
+</style>
+</head>
+<body>
+<h1>Comprehensive Quiz: Philippine Laws & Political Terms</h1>
+<div class="quiz-container" id="quiz">
+
+<!-- Example Question 1 -->
+<div class="question" data-answer="RA3019">
+<p>1. Anti-Graft and Corrupt Practices Act?</p>
+<div class="options">
+<label><input type="radio" name="q1" value="RA3019"> RA 3019</label>
+<label><input type="radio" name="q1" value="RA1379"> RA 1379</label>
+<label><input type="radio" name="q1" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q1" value="RA7080"> RA 7080</label>
+</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" data-answer="RA1379">
+<p>2. Law for confiscation of illegally acquired wealth?</p>
+<div class="options">
+<label><input type="radio" name="q2" value="RA3019"> RA 3019</label>
+<label><input type="radio" name="q2" value="RA1379"> RA 1379</label>
+<label><input type="radio" name="q2" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q2" value="RA7080"> RA 7080</label>
+</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" data-answer="RA6713">
+<p>3. Code of Conduct and Ethical Standards for Public Officials?</p>
+<div class="options">
+<label><input type="radio" name="q3" value="RA3019"> RA 3019</label>
+<label><input type="radio" name="q3" value="RA1379"> RA 1379</label>
+<label><input type="radio" name="q3" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q3" value="RA7080"> RA 7080</label>
+</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" data-answer="RA7080">
+<p>4. The Plunder Law?</p>
+<div class="options">
+<label><input type="radio" name="q4" value="RA7080"> RA 7080</label>
+<label><input type="radio" name="q4" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q4" value="RA7659"> RA 7659</label>
+<label><input type="radio" name="q4" value="RA9160"> RA 9160</label>
+</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" data-answer="RA7659">
+<p>5. Heinous Crime Law?</p>
+<div class="options">
+<label><input type="radio" name="q5" value="RA7080"> RA 7080</label>
+<label><input type="radio" name="q5" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q5" value="RA7659"> RA 7659</label>
+<label><input type="radio" name="q5" value="RA9160"> RA 9160</label>
+</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" data-answer="RA9160">
+<p>6. Anti-Money Laundering Law?</p>
+<div class="options">
+<label><input type="radio" name="q6" value="RA7080"> RA 7080</label>
+<label><input type="radio" name="q6" value="RA6713"> RA 6713</label>
+<label><input type="radio" name="q6" value="RA7659"> RA 7659</label>
+<label><input type="radio" name="q6" value="RA9160"> RA 9160</label>
+</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" data-answer="PD46">
+<p>7. Decree on Gift-Giving for officials?</p>
+<div class="options">
+<label><input type="radio" name="q7" value="PD46"> PD 46</label>
+<label><input type="radio" name="q7" value="PD749"> PD 749</label>
+<label><input type="radio" name="q7" value="EO1"> EO 1</label>
+<label><input type="radio" name="q7" value="RA6770"> RA 6770</label>
+</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" data-answer="PD749">
+<p>8. Immunity for informants in corruption cases?</p>
+<div class="options">
+<label><input type="radio" name="q8" value="PD46"> PD 46</label>
+<label><input type="radio" name="q8" value="PD749"> PD 749</label>
+<label><input type="radio" name="q8" value="EO1"> EO 1</label>
+<label><input type="radio" name="q8" value="RA6770"> RA 6770</label>
+</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question" data-answer="RA6770">
+<p>9. Ombudsman Act (investigates government officials)?</p>
+<div class="options">
+<label><input type="radio" name="q9" value="PD46"> PD 46</label>
+<label><input type="radio" name="q9" value="PD749"> PD 749</label>
+<label><input type="radio" name="q9" value="EO1"> EO 1</label>
+<label><input type="radio" name="q9" value="RA6770"> RA 6770</label>
+</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question" data-answer="Simultaneous">
+<p>10. Kapag dalawa o higit pang miyembro ng pamilya ay kasalukuyang humahawak ng posisyon sa pamahalaan, tawag dito?</p>
+<div class="options">
+<label><input type="radio" name="q10" value="Simultaneous"> Simultaneous Dynasty</label>
+<label><input type="radio" name="q10" value="Sequential"> Successive Dynasty</label>
+<label><input type="radio" name="q10" value="Mixed"> Mixed Dynasty</label>
+</div>
+</div>
+
+<!-- Add more questions here for all laws, EO 1,2,14, writs, and definitions... -->
+
+<button id="score-btn">Ipakita ang Score</button>
+<button id="try-btn" style="display:none;">Try Again</button>
+</div>
+
+<button id="editor-btn">Editor 🔒</button>
+<div id="editor-area">
+<h3>Editor Mode (Password: jg12)</h3>
+<textarea id="editor-content" rows="10" style="width:100%;"></textarea>
+<button id="save-editor">Save</button>
+</div>
+
+<footer>[Experimental lang po ito for exams^^ -Nov/20/2025]</footer>
+
+<script>
+const scoreBtn = document.getElementById('score-btn');
+const tryBtn = document.getElementById('try-btn');
+
+scoreBtn.onclick = function() {
+  let questions = document.querySelectorAll('.question');
+  let score = 0;
+  questions.forEach(q => {
+    let selected = q.querySelector('input[type=radio]:checked');
+    if(selected && selected.value === q.dataset.answer){
+      score++;
+    }
+  });
+  alert('Score mo: ' + score + '/' + questions.length);
+  tryBtn.style.display = 'inline';
+}
+
+tryBtn.onclick = function() {
+  document.querySelectorAll('input[type=radio]').forEach(i => i.checked = false);
+  tryBtn.style.display = 'none';
+}
+
+// Editor logic
+const editorBtn = document.getElementById('editor-btn');
+const editorArea = document.getElementById('editor-area');
+const saveBtn = document.getElementById('save-editor');
+
+editorBtn.onclick = function(){
+  let pwd = prompt("Enter editor password:");
+  if(pwd === "jg12"){
+    editorArea.style.display = editorArea.style.display === "none" ? "block" : "none";
+  } else {
+    alert("Wrong password!");
+  }
+}
+
+saveBtn.onclick = function(){
+  alert("Editor save functionality is simulated. Changes will not persist on GitHub Pages.");
+}
+</script>
+</body>
+</html>
