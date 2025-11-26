@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Formation Quiz</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+h1 { text-align: center; color: #333; }
+.quiz-container { background: #fff; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; }
+.question { margin-bottom: 15px; }
+.options { list-style-type: none; padding-left: 0; }
+.options li { margin-bottom: 5px; }
+button { padding: 10px 20px; margin-top: 20px; cursor: pointer; border: none; background: #007BFF; color: white; border-radius: 5px; }
+button:hover { background: #0056b3; }
+#score, #answerKey { margin-top: 20px; background: #e9ecef; padding: 10px; border-radius: 5px; display: none; }
+.footer { margin-top: 30px; font-size: 0.85em; text-align: center; color: #555; }
+</style>
+</head>
+<body>
+<div class="quiz-container">
+<h1>Christian Formation Quiz</h1>
+
+<form id="quizForm">
+
+<!-- QUESTIONS START HERE -->
+
+<div class="question">
+<p>1. Ano ang pangunahing papel ng magulang?</p>
+<ul class="options">
+<li><input type="radio" name="q1" value="B"> Gabayan at maghubog ng bata</li>
+<li><input type="radio" name="q1" value="A"> Magturo ng math</li>
+<li><input type="radio" name="q1" value="C"> Magbigay ng regalo</li>
+<li><input type="radio" name="q1" value="D"> Magpasaya sa komunidad</li>
+</ul>
+</div>
+
+<div class="question">
+<p>2. Aling parenting style ang strict pero open to negotiation?</p>
+<ul class="options">
+<li><input type="radio" name="q2" value="C"> Authoritative</li>
+<li><input type="radio" name="q2" value="A"> Permissive</li>
+<li><input type="radio" name="q2" value="B"> Authoritarian</li>
+<li><input type="radio" name="q2" value="D"> Uninvolved</li>
+</ul>
+</div>
+
+<div class="question">
+<p>3. Anong style ang nagreresulta sa anak na masunurin ngunit kulang sa tiwala sa sarili?</p>
+<ul class="options">
+<li><input type="radio" name="q3" value="A"> Authoritarian</li>
+<li><input type="radio" name="q3" value="C"> Permissive</li>
+<li><input type="radio" name="q3" value="D"> Uninvolved</li>
+<li><input type="radio" name="q3" value="B"> Authoritative</li>
+</ul>
+</div>
+
+<div class="question">
+<p>4. Aling style ang \"friend-level\" sa pagiging open?</p>
+<ul class="options">
+<li><input type="radio" name="q4" value="D"> Permissive</li>
+<li><input type="radio" name="q4" value="A"> Authoritative</li>
+<li><input type="radio" name="q4" value="B"> Uninvolved</li>
+<li><input type="radio" name="q4" value="C"> Authoritarian</li>
+</ul>
+</div>
+
+<div class="question">
+<p>5. Aling parenting style ang kulang sa guidance at pakikialam?</p>
+<ul class="options">
+<li><input type="radio" name="q5" value="D"> Uninvolved</li>
+<li><input type="radio" name="q5" value="A"> Permissive</li>
+<li><input type="radio" name="q5" value="B"> Authoritative</li>
+<li><input type="radio" name="q5" value="C"> Authoritarian</li>
+</ul>
+</div>
+
+<div class="question">
+<p>6. Ano ang ibig sabihin ng Genetika?</p>
+<ul class="options">
+<li><input type="radio" name="q6" value="A"> Minanang katangian mula sa magulang</li>
+<li><input type="radio" name="q6" value="B"> Karansing natutunan</li>
+<li><input type="radio" name="q6" value="C"> Impluwensiya ng kaibigan</li>
+<li><input type="radio" name="q6" value="D"> Gawa ng komunidad</li>
+</ul>
+</div>
+
+<div class="question">
+<p>7. Ano ang ibig sabihin ng Kapaligiran?</p>
+<ul class="options">
+<li><input type="radio" name="q7" value="A"> Karanasan sa tahanan, paaralan, at komunidad</li>
+<li><input type="radio" name="q7" value="B"> Genetic traits</li>
+<li><input type="radio" name="q7" value="C"> Social media</li>
+<li><input type="radio" name="q7" value="D"> Impormasyon sa libro</li>
+</ul>
+</div>
+
+<div class="question">
+<p>8. Sino si San Francisco ng Assisi?</p>
+<ul class="options">
+<li><input type="radio" name="q8" value="A"> Patron ng mga hayop at kalikasan</li>
+<li><input type="radio" name="q8" value="B"> Patron ng mga doktor</li>
+<li><input type="radio" name="q8" value="C"> Patron ng mga sundalo</li>
+<li><input type="radio" name="q8" value="D"> Patron ng mga musikero</li>
+</ul>
+</div>
+
+<div class="question">
+<p>9. Ano ang tunay na pangalan ni San Francisco ng Assisi?</p>
+<ul class="options">
+<li><input type="radio" name="q9" value="A"> Giovanni di Pietro di Bernardone</li>
+<li><input type="radio" name="q9" value="B"> Pietro di Giovanni Assisi</li>
+<li><input type="radio" name="q9" value="C"> Angelo Francesco</li>
+<li><input type="radio" name="q9" value="D"> Bernandone Pietro</li>
+</ul>
+</div>
+
+<div class="question">
+<p>10. Ano ang ibig sabihin ng Personal na Antas ng kasalanan?</p>
+<ul class="options">
+<li><input type="radio" name="q10" value="A"> Makatwirang pagkilos ng indibidwal</li>
+<li><input type="radio" name="q10" value="B"> Mahiyaing pag-uugali</li>
+<li><input type="radio" name="q10" value="C"> Mapanirang gawa ng lipunan</li>
+<li><input type="radio" name="q10" value="D"> Mamasid na kasalanan</li>
+</ul>
+</div>
+
+<div class="question">
+<p>11. Ano ang Panlipunang Antas ng kasalanan?</p>
+<ul class="options">
+<li><input type="radio" name="q11" value="A"> Impluwensiya ng lipunan sa ating pag-uugali</li>
+<li><input type="radio" name="q11" value="B"> Likas na talento</li>
+<li><input type="radio" name="q11" value="C"> Pag-aaral sa paaralan</li>
+<li><input type="radio" name="q11" value="D"> Masamang ugali ng pamilya</li>
+</ul>
+</div>
+
+<div class="question">
+<p>12. Ano ang Originating Sin?</p>
+<ul class="options">
+<li><input type="radio" name="q12" value="A"> Kasalanan nina Adan at Eba</li>
+<li><input type="radio" name="q12" value="B"> Kasalanan natin ngayon</li>
+<li><input type="radio" name="q12" value="C"> Pagbabalik-loob sa Diyos</li>
+<li><input type="radio" name="q12" value="D"> Likas na kabutihan</li>
+</ul>
+</div>
+
+<div class="question">
+<p>13. Ano ang Originated Sin?</p>
+<ul class="options">
+<li><input type="radio" name="q13" value="A"> Epekto ng Original Sin sa atin</li>
+<li><input type="radio" name="q13" value="B"> Gawa ng kawanggawa</li>
+<li><input type="radio" name="q13" value="C"> Pagiging tapat</li>
+<li><input type="radio" name="q13" value="D"> Paggalang sa kapwa</li>
+</ul>
+</div>
+
+<div class="question">
+<p>14. Ano ang Concupiscence?</p>
+<ul class="options">
+<li><input type="radio" name="q14" value="A"> Panloob na pag-akit sa kasalanan</li>
+<li><input type="radio" name="q14" value="B"> Pagbigkas ng panalangin</li>
+<li><input type="radio" name="q14" value="C"> Pagiging matapat</li>
+<li><input type="radio" name="q14" value="D"> Pagiging mabait</li>
+</ul>
+</div>
+
+<div class="question">
+<p>15. Alin ang Antecedent Concupiscence?</p>
+<ul class="options">
+<li><input type="radio" name="q15" value="A"> Hindi sinasadya, natural na reaksyon</li>
+<li><input type="radio" name="q15" value="B"> Sinasadya at kusang ginagawa</li>
+<li><input type="radio" name="q15" value="C"> Pagpapakumbaba</li>
+<li><input type="radio" name="q15" value="D"> Pagiging disiplinado</li>
+</ul>
+</div>
+
+<div class="question">
+<p>16. Ano ang Consequent Concupiscence?</p>
+<ul class="options">
+<li><input type="radio" name="q16" value="A"> Kusang ginagawa para mas mabilis ang pagkilos</li>
+<li><input type="radio" name="q16" value="B"> Di sinasadya</li>
+<li><input type="radio" name="q16" value="C"> Pagdarasal</li>
+<li><input type="radio" name="q16" value="D"> Pagbibigay</li>
+</ul>
+</div>
+
+<div class="question">
+<p>17. Ano ang simbolo ng Tubig ng Binyag?</p>
+<ul class="options">
+<li><input type="radio" name="q17" value="A"> Banal na biyaya ng Diyos</li>
+<li><input type="radio" name="q17" value="B"> Pag-aaral</li>
+<li><input type="radio" name="q17" value="C"> Pagpapakasal</li>
+<li><input type="radio" name="q17" value="D"> Pagdarasal</li>
+</ul>
+</div>
+
+<div class="question">
+<p>18. Gaano kadalas nirerequire ang sakramento ng kumpisal?</p>
+<ul class="options">
+<li><input type="radio" name="q18" value="A"> Isang beses kada taon</li>
+<li><input type="radio" name="q18" value="B"> Araw-araw</li>
+<li><input type="radio" name="q18" value="C"> Lingguhan</li>
+<li><input type="radio" name="q18" value="D"> Buwan-buwan</li>
+</ul>
+</div>
+
+<div class="question">
+<p>19. Ano ang Lust?</p>
+<ul class="options">
+<li><input type="radio" name="q19" value="A"> Labis na paghahangad ng sekswal na kaligayahan</li>
+<li><input type="radio" name="q19" value="B"> Sobrang pagkain</li>
+<li><input type="radio" name="q19" value="C"> Pagtatamad</li>
+<li><input type="radio" name="q19" value="D"> Galit</li>
+</ul>
+</div>
+
+<div class="question">
+<p>20. Ano ang Gluttony?</p>
+<ul class="options">
+<li><input type="radio" name="q20" value="A"> Sobrang pagkain at inumin</li>
+<li><input type="radio" name="q20" value="B"> Kasakiman</li>
+<li><input type="radio" name="q20" value="C"> Envy</li>
+<li><input type="radio" name="q20" value="D"> Katamaran</li>
+</ul>
+</div>
+
+<div class="question">
+<p>21. Ano ang Greed?</p>
+<ul class="options">
+<li><input type="radio" name="q21" value="A"> Pag-ibig sa pag-aari at kasakiman</li>
+<li><input type="radio" name="q21" value="B"> Labis na pagkain</li>
+<li><input type="radio" name="q21" value="C"> Pagtatamad</li>
+<li><input type="radio" name="q21" value="D"> Galit</li>
+</ul>
+</div>
+
+<div class="question">
+<p>22. Ano ang Sloth?</p>
+<ul class="options">
+<li><input type="radio" name="q22" value="A"> Katamaran at pag-iwas sa tungkulin</li>
+<li><input type="radio" name="q22" value="B"> Galit</li>
+<li><input type="radio" name="q22" value="C"> Envy</li>
+<li><input type="radio" name="q22" value="D"> Lust</li>
+</ul>
+</div>
+
+<div class="question">
+<p>23. Ano ang Wrath?</p>
+<ul class="options">
+<li><input type="radio" name="q23" value="A"> Matinding galit</li>
+<li><input type="radio" name="q23" value="B"> Katamaran</li>
+<li><input type="radio" name="q23" value="C"> Kasakiman</li>
+<li><input type="radio" name="q23" value="D"> Lust</li>
+</ul>
+</div>
+
+<div class="question">
+<p>24. Ano ang Envy?</p>
+<ul class="options">
+<li><input type="radio" name="q24" value="A"> Pagnanasa sa bagay o talento ng iba</li>
+<li><input type="radio" name="q24" value="B"> Pagtulong</li>
+<li><input type="radio" name="q24" value="C"> Pagtitipid</li>
+<li><input type="radio" name="q24" value="D"> Pagiging masayahin</li>
+</ul>
+</div>
+
+<div class="question">
+<p>25. Ano ang Pride?</p>
+<ul class="options">
+<li><input type="radio" name="q25" value="A"> Labis na pag-ibig sa sarili</li>
+<li><input type="radio" name="q25" value="B"> Pagiging mapagbigay</li>
+<li><input type="radio" name="q25" value="C"> Pagiging mahiyain</li>
+<li><input type="radio" name="q25" value="D"> Pagiging malinis</li>
+</ul>
+</div>
+
+<div class="question">
+<p>26. Ano ang Capital Punishment?</p>
+<ul class="options">
+<li><input type="radio" name="q26" value="A"> Pagpatay sa taong nagkasala (death penalty)</li>
+<li><input type="radio" name="q26" value="B"> Pagbibigay ng pagkain</li>
+<li><input type="radio" name="q26" value="C"> Pag-aaral sa simbahan</li>
+<li><input type="radio" name="q26" value="D"> Pag-aaral ng Bibliya</li>
+</ul>
+</div>
+
+<div class="question">
+<p>27. Ano ang Euthanasia?</p>
+<ul class="options">
+<li><input type="radio" name="q27" value="A"> Pagpatay para \"mawala ang sakit\" (mercy killing)</li>
+<li><input type="radio" name="q27" value="B"> Pagdarasal</li>
+<li><input type="radio" name="q27" value="C"> Pagpapakasal</li>
+<li><input type="radio" name="q27" value="D"> Pag-aaral</li>
+</ul>
+</div>
+
+<div class="question">
+<p>28. Ilan ang karapatan ng bata?</p>
+<ul class="options">
+<li><input type="radio" name="q28" value="A"> 12</li>
+<li><input type="radio" name="q28" value="B"> 10</li>
+<li><input type="radio" name="q28" value="C"> 8</li>
+<li><input type="radio" name="q28" value="D"> 15</li>
+</ul>
+</div>
+
+<div class="question">
+<p>29. Ano ang unang karapatan ng bata?</p>
+<ul class="options">
+<li><input type="radio" name="q29" value="A"> The right to be born well</li>
+<li><input type="radio" name="q29" value="B"> The right to play</li>
+<li><input type="radio" name="q29" value="C"> The right to education</li>
+<li><input type="radio" name="q29" value="D"> The right to peace</li>
+</ul>
+</div>
+
+<div class="question">
+<p>30. Saan namatay si San Francisco?</p>
+<ul class="options">
+<li><input type="radio" name="q30" value="A"> Porziuncola</li>
+<li><input type="radio" name="q30" value="B"> Roma</li>
+<li><input type="radio" name="q30" value="C"> Gubbio</li>
+<li><input type="radio" name="q30" value="D"> Assisi</li>
+</ul>
+</div>
+
+<button type="button" onclick="checkScore()">I-submit</button>
+<button type="button" onclick="tryAgain()">Subukan Muli</button>
+
+<div id="score"></div>
+<div id="answerKey"></div>
+
+<div class="footer">[CF Reviewer Quiz - 2025]</div>
+
+</form>
+
+<script>
+const answers = {
+q1:\"B\", q2:\"C\", q3:\"A\", q4:\"D\", q5:\"D\", 
+q6:\"A\", q7:\"A\", q8:\"A\", q9:\"A\", q10:\"A\",
+q11:\"A\", q12:\"A\", q13:\"A\", q14:\"A\", q15:\"A\",
+q16:\"A\", q17:\"A\", q18:\"A\", q19:\"A\", q20:\"A\",
+q21:\"A\", q22:\"A\", q23:\"A\", q24:\"A\", q25:\"A\",
+q26:\"A\", q27:\"A\", q28:\"A\", q29:\"A\", q30:\"A\"
+};
+
+function checkScore() {
+let score = 0;
+let total = Object.keys(answers).length;
+for (let q in answers) {
+  const userAnswer = document.querySelector(`input[name=${q}]:checked`);
+  if (userAnswer && userAnswer.value === answers[q]) score++;
+}
+document.getElementById('score').style.display='block';
+document.getElementById('score').innerHTML = `<strong>Score: ${score} / ${total}</strong>`;
+showAnswerKey();
+}
+
+function showAnswerKey() {
+let keyHTML = '<h3>Answer Key:</h3><ul>';
+for (let q in answers) {
+  keyHTML += `<li>${q.toUpperCase()}: ${answers[q]}</li>`;
+}
+keyHTML += '</ul>';
+document.getElementById('answerKey').style.display='block';
+document.getElementById('answerKey').innerHTML = keyHTML;
+}
+
+function tryAgain() {
+document.getElementById('quizForm').reset();
+document.getElementById('score').style.display='none';
+document.getElementById('answerKey').style.display='none';
+}
+</script>
+
+</body>
+</html>
