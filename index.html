@@ -3,369 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graft, Korupsiyon & Political Dynasty Quiz</title>
+<title>Subject Selector</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-h1 { text-align: center; color: #333; }
-.quiz-container { background: #fff; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; }
-.question { margin-bottom: 15px; }
-.options { list-style-type: none; padding-left: 0; }
-.options li { margin-bottom: 5px; }
-button { padding: 10px 20px; margin-top: 20px; cursor: pointer; border: none; background: #007BFF; color: white; border-radius: 5px; }
-button:hover { background: #0056b3; }
-#score, #answerKey { margin-top: 20px; background: #e9ecef; padding: 10px; border-radius: 5px; display: none; }
-.footer { margin-top: 30px; font-size: 0.85em; text-align: center; color: #555; }
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+}
+h1 {
+    margin-bottom: 40px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+button {
+    padding: 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
 </style>
 </head>
 <body>
-<div class="quiz-container">
-<h1>Graft, Korupsiyon & Political Dynasty Quiz</h1>
 
-<form id="quizForm">
+<h1>Pumili ng Asignatura</h1>
 
-<div class="question">
-<p>1. Ano ang ibig sabihin ng Graft?</p>
-<ul class="options">
-<li><input type="radio" name="q1" value="A"> Paggamit ng legal na paraan para sa personal na kita</li>
-<li><input type="radio" name="q1" value="B"> Paggamit ng ilegal o hindi patas na paraan para sa kalamangan</li>
-<li><input type="radio" name="q1" value="C"> Pagsunod sa batas ng gobyerno</li>
-<li><input type="radio" name="q1" value="D"> Pagbibigay serbisyo sa publiko nang tapat</li>
-</ul>
+<div class="container">
+    <button onclick="location.href='mapeh.html'">MAPEH</button>
+    <button onclick="location.href='cf.html'">Christian Formation (CF)</button>
+    <button onclick="location.href='ap.html'">Araling Panlipunan (AP)</button>
+    <button onclick="location.href='math.html'">Math</button>
 </div>
 
-<div class="question">
-<p>2. Ano ang ibig sabihin ng Korupsiyon?</p>
-<ul class="options">
-<li><input type="radio" name="q2" value="A"> Dishonest o illegal na pag-uugali ng mga nasa kapangyarihan</li>
-<li><input type="radio" name="q2" value="B"> Paglilingkod sa publiko nang tapat</li>
-<li><input type="radio" name="q2" value="C"> Pagpapalawak ng serbisyo publiko</li>
-<li><input type="radio" name="q2" value="D"> Pagbibigay ng grant sa mga NGO</li>
-</ul>
-</div>
-
-<div class="question">
-<p>3. Ano ang RA 3019?</p>
-<ul class="options">
-<li><input type="radio" name="q3" value="A"> Anti-Graft and Corrupt Practices Act</li>
-<li><input type="radio" name="q3" value="B"> Code of Conduct and Ethical Standards</li>
-<li><input type="radio" name="q3" value="C"> The Plunder Law</li>
-<li><input type="radio" name="q3" value="D"> Anti-Money Laundering Law</li>
-</ul>
-</div>
-
-<div class="question">
-<p>4. Ano ang RA 6713?</p>
-<ul class="options">
-<li><input type="radio" name="q4" value="A"> Code of Conduct and Ethical Standards for Public Officials</li>
-<li><input type="radio" name="q4" value="B"> Anti-Graft Law</li>
-<li><input type="radio" name="q4" value="C"> Ombudsman Act</li>
-<li><input type="radio" name="q4" value="D"> Plunder Law</li>
-</ul>
-</div>
-
-<div class="question">
-<p>5. Ano ang RA 7080?</p>
-<ul class="options">
-<li><input type="radio" name="q5" value="A"> Anti-Graft</li>
-<li><input type="radio" name="q5" value="B"> The Plunder Law</li>
-<li><input type="radio" name="q5" value="C"> Anti-Money Laundering Law</li>
-<li><input type="radio" name="q5" value="D"> Code of Conduct</li>
-</ul>
-</div>
-
-<div class="question">
-<p>6. Ano ang RA 7659?</p>
-<ul class="options">
-<li><input type="radio" name="q6" value="A"> Heinous Crime Law</li>
-<li><input type="radio" name="q6" value="B"> Plunder Law</li>
-<li><input type="radio" name="q6" value="C"> Anti-Graft</li>
-<li><input type="radio" name="q6" value="D"> Code of Conduct</li>
-</ul>
-</div>
-
-<div class="question">
-<p>7. Ano ang RA 9160?</p>
-<ul class="options">
-<li><input type="radio" name="q7" value="A"> Anti-Money Laundering Law</li>
-<li><input type="radio" name="q7" value="B"> Plunder Law</li>
-<li><input type="radio" name="q7" value="C"> Anti-Graft Law</li>
-<li><input type="radio" name="q7" value="D"> Ombudsman Act</li>
-</ul>
-</div>
-
-<div class="question">
-<p>8. Ano ang PD 46?</p>
-<ul class="options">
-<li><input type="radio" name="q8" value="A"> Gift-Giving Decree</li>
-<li><input type="radio" name="q8" value="B"> Anti-Graft Law</li>
-<li><input type="radio" name="q8" value="C"> Ombudsman Act</li>
-<li><input type="radio" name="q8" value="D"> Plunder Law</li>
-</ul>
-</div>
-
-<div class="question">
-<p>9. Ano ang PD 749?</p>
-<ul class="options">
-<li><input type="radio" name="q9" value="A"> Nagbibigay ng immunity sa informants tungkol sa corruption</li>
-<li><input type="radio" name="q9" value="B"> Anti-Graft Law</li>
-<li><input type="radio" name="q9" value="C"> Plunder Law</li>
-<li><input type="radio" name="q9" value="D"> Ombudsman Act</li>
-</ul>
-</div>
-
-<div class="question">
-<p>10. Ano ang RA 6770?</p>
-<ul class="options">
-<li><input type="radio" name="q10" value="A"> Ombudsman Act</li>
-<li><input type="radio" name="q10" value="B"> Plunder Law</li>
-<li><input type="radio" name="q10" value="C"> Anti-Graft Law</li>
-<li><input type="radio" name="q10" value="D"> Code of Conduct</li>
-</ul>
-</div>
-
-<div class="question">
-<p>11. Ano ang EO 1 ng 1986?</p>
-<ul class="options">
-<li><input type="radio" name="q11" value="A"> PCGG para habulin ang nakaw na yaman</li>
-<li><input type="radio" name="q11" value="B"> Plunder Law</li>
-<li><input type="radio" name="q11" value="C"> Ombudsman Act</li>
-<li><input type="radio" name="q11" value="D"> Gift-Giving Decree</li>
-</ul>
-</div>
-
-<div class="question">
-<p>12. Ano ang EO 2 ng 1986?</p>
-<ul class="options">
-<li><input type="radio" name="q12" value="A"> Pag-audit ng illegal assets ni Marcos</li>
-<li><input type="radio" name="q12" value="B"> Plunder Law</li>
-<li><input type="radio" name="q12" value="C"> Anti-Graft Law</li>
-<li><input type="radio" name="q12" value="D"> Code of Conduct</li>
-</ul>
-</div>
-
-<div class="question">
-<p>13. Ano ang EO 14 ng 1986?</p>
-<ul class="options">
-<li><input type="radio" name="q13" value="A"> Sandiganbayan may exclusive jurisdiction sa PCGG cases</li>
-<li><input type="radio" name="q13" value="B"> Plunder Law</li>
-<li><input type="radio" name="q13" value="C"> Anti-Graft Law</li>
-<li><input type="radio" name="q13" value="D"> Gift-Giving Decree</li>
-</ul>
-</div>
-
-<div class="question">
-<p>14. Ano ang writ of mandamus?</p>
-<ul class="options">
-<li><input type="radio" name="q14" value="A"> Utos ng korte sa opisyal na gawin ang tungkulin o ayusin ang abuso</li>
-<li><input type="radio" name="q14" value="B"> Utos para ipakita ang nakakulong</li>
-<li><input type="radio" name="q14" value="C"> Pagsusuri ng korte sa mas mababang korte</li>
-<li><input type="radio" name="q14" value="D"> Utos pumigil sa isang gawain</li>
-</ul>
-</div>
-
-<div class="question">
-<p>15. Ano ang writ of habeas corpus?</p>
-<ul class="options">
-<li><input type="radio" name="q15" value="A"> Utos na ipakita sa korte ang nakakulong upang suriin legalidad</li>
-<li><input type="radio" name="q15" value="B"> Utos sa opisyal gawin ang tungkulin</li>
-<li><input type="radio" name="q15" value="C"> Utos pumigil sa gawain</li>
-<li><input type="radio" name="q15" value="D"> Pagsusuri ng korte sa mas mababang korte</li>
-</ul>
-</div>
-
-<div class="question">
-<p>16. Ano ang writ of injunction?</p>
-<ul class="options">
-<li><input type="radio" name="q16" value="A"> Utos ng korte pumigil sa gawain lumalabag sa karapatan ng iba</li>
-<li><input type="radio" name="q16" value="B"> Utos ipakita ang nakakulong</li>
-<li><input type="radio" name="q16" value="C"> Utos sa opisyal gawin tungkulin</li>
-<li><input type="radio" name="q16" value="D"> Pagsusuri ng mas mababang korte</li>
-</ul>
-</div>
-
-<div class="question">
-<p>17. Ano ang writ of certiorari?</p>
-<ul class="options">
-<li><input type="radio" name="q17" value="A"> Pagsusuri ng mas mataas na korte sa tala ng mas mababang korte para rebisyon</li>
-<li><input type="radio" name="q17" value="B"> Utos ipakita ang nakakulong</li>
-<li><input type="radio" name="q17" value="C"> Utos pumigil sa gawain</li>
-<li><input type="radio" name="q17" value="D"> Utos sa opisyal gawin tungkulin</li>
-</ul>
-</div>
-
-<div class="question">
-<p>18. Ano ang Quo Warranto?</p>
-<ul class="options">
-<li><input type="radio" name="q18" value="A"> Legal na paraan para pigilan ang taong o organisasyon na gamitin ang awtoridad kung walang karapatan</li>
-<li><input type="radio" name="q18" value="B"> Utos ipakita ang nakakulong</li>
-<li><input type="radio" name="q18" value="C"> Utos pumigil sa gawain</li>
-<li><input type="radio" name="q18" value="D"> Writ para sa opisyal gawin tungkulin</li>
-</ul>
-</div>
-
-<div class="question">
-<p>19. Ano ang The Plunder Law?</p>
-<ul class="options">
-<li><input type="radio" name="q19" value="A"> RA 7080</li>
-<li><input type="radio" name="q19" value="B"> RA 6713</li>
-<li><input type="radio" name="q19" value="C"> RA 7659</li>
-<li><input type="radio" name="q19" value="D"> RA 9160</li>
-</ul>
-</div>
-
-<div class="question">
-<p>20. Ano ang layunin ng RA 6713?</p>
-<ul class="options">
-<li><input type="radio" name="q20" value="A"> Magtakda ng pamantayan sa etika ng opisyal at empleyado</li>
-<li><input type="radio" name="q20" value="B"> Anti-Graft</li>
-<li><input type="radio" name="q20" value="C"> Plunder Law</li>
-<li><input type="radio" name="q20" value="D"> Ombudsman Act</li>
-</ul>
-</div>
-
-<div class="question">
-<p>21. Ano ang Dinastiyang Politikal?</p>
-<ul class="options">
-<li><input type="radio" name="q21" value="A"> Pamilya o grupo na nagpapanatili ng political power sa maraming henerasyon</li>
-<li><input type="radio" name="q21" value="B"> Paglilingkod sa publiko nang tapat</li>
-<li><input type="radio" name="q21" value="C"> Paggamit ng graft para sa personal gain</li>
-<li><input type="radio" name="q21" value="D"> Anti-corruption program</li>
-</ul>
-</div>
-
-<div class="question">
-<p>22. Ano ang Simultaneous Dynasty?</p>
-<ul class="options">
-<li><input type="radio" name="q22" value="A"> Dalawa o higit pang miyembro ng pamilya kasalukuyang humahawak ng posisyon</li>
-<li><input type="radio" name="q22" value="B"> Sunod-sunod na termino ng pamilya sa iisang posisyon</li>
-<li><input type="radio" name="q22" value="C"> Pagsamahin ang sabay at sunod na termino</li>
-<li><input type="radio" name="q22" value="D"> Pag-alis ng dynasty</li>
-</ul>
-</div>
-
-<div class="question">
-<p>23. Ano ang Successive/Sequential Dynasty?</p>
-<ul class="options">
-<li><input type="radio" name="q23" value="A"> Pamilya na magkakasunod na humahawak ng iisang posisyon</li>
-<li><input type="radio" name="q23" value="B"> Sabay-sabay na posisyon ng pamilya</li>
-<li><input type="radio" name="q23" value="C"> Pag-alis ng dynasty</li>
-<li><input type="radio" name="q23" value="D"> Pagpapatalsik ng opisyal</li>
-</ul>
-</div>
-
-<div class="question">
-<p>24. Ano ang Mixed Dynasty?</p>
-<ul class="options">
-<li><input type="radio" name="q24" value="A"> Pinagsamang sabay at sunod na dynasties</li>
-<li><input type="radio" name="q24" value="B"> Wala sa pamilya</li>
-<li><input type="radio" name="q24" value="C"> Anti-corruption program</li>
-<li><input type="radio" name="q24" value="D"> Paggamit ng graft</li>
-</ul>
-</div>
-
-<div class="question">
-<p>25. Ano ang unang antas ng Consanguinity?</p>
-<ul class="options">
-<li><input type="radio" name="q25" value="A"> Magulang at anak</li>
-<li><input type="radio" name="q25" value="B"> Lolo at apo</li>
-<li><input type="radio" name="q25" value="C"> Tiyo/Tiya at Pamangkin</li>
-<li><input type="radio" name="q25" value="D"> Unang pinsan</li>
-</ul>
-</div>
-
-<div class="question">
-<p>26. Ano ang pangalawang antas ng Consanguinity?</p>
-<ul class="options">
-<li><input type="radio" name="q26" value="A"> Lolo at apo</li>
-<li><input type="radio" name="q26" value="B"> Magulang at anak</li>
-<li><input type="radio" name="q26" value="C"> Tiyo/Tiya at pamangkin</li>
-<li><input type="radio" name="q26" value="D"> Unang pinsan</li>
-</ul>
-</div>
-
-<div class="question">
-<p>27. Ano ang pinakamataas na hurisdiksyon ng Sandiganbayan?</p>
-<ul class="options">
-<li><input type="radio" name="q27" value="A"> Mga opisyal na Salary Grade 27 o mas mataas</li>
-<li><input type="radio" name="q27" value="B"> Pangulo at Kongreso</li>
-<li><input type="radio" name="q27" value="C"> Judiciary</li>
-<li><input type="radio" name="q27" value="D"> Lahat ng mamamayan</li>
-</ul>
-</div>
-
-<div class="question">
-<p>28. Ano ang epekto ng korupsiyon sa financial stability?</p>
-<ul class="options">
-<li><input type="radio" name="q28" value="A"> Nagdudulot ng instability sa pananalapi</li>
-<li><input type="radio" name="q28" value="B"> Nagpapalakas ng ekonomiya</li>
-<li><input type="radio" name="q28" value="C"> Wala epekto</li>
-<li><input type="radio" name="q28" value="D"> Nagpapababa ng moralidad</li>
-</ul>
-</div>
-
-<div class="question">
-<p>29. Ano ang House Bill No. 3413?</p>
-<ul class="options">
-<li><input type="radio" name="q29" value="A"> Pagbabawal sa sabay-sabay o sunod-sunod na termino ng magkamag-anak</li>
-<li><input type="radio" name="q29" value="B"> Plunder Law</li>
-<li><input type="radio" name="q29" value="C"> Anti-Graft</li>
-<li><input type="radio" name="q29" value="D"> Ombudsman Act</li>
-</ul>
-</div>
-
-<div class="question">
-<p>30. Ano ang Senate Bill No. 2649?</p>
-<ul class="options">
-<li><input type="radio" name="q30" value="A"> Ipinagbabawal ang sabayang pag-upo ng magkamag-anak sa elective positions</li>
-<li><input type="radio" name="q30" value="B"> Plunder Law</li>
-<li><input type="radio" name="q30" value="C"> Anti-Graft Law</li>
-<li><input type="radio" name="q30" value="D"> RA 6713</li>
-</ul>
-</div>
-
-<button type="button" onclick="checkScore()">I-submit</button>
-<button type="button" onclick="tryAgain()">Subukan Muli</button>
-
-<div id="score"></div>
-<div id="answerKey"></div>
-<div class="footer">[Experimental lang po ito for exams^^ -Nov/20/2025]</div>
-
-</form>
-
-<script>
-const answers = {
-q1:"B", q2:"A", q3:"A", q4:"A", q5:"B", q6:"A", q7:"A", q8:"A", q9:"A", q10:"A",
-q11:"A", q12:"A", q13:"A", q14:"A", q15:"A", q16:"A", q17:"A", q18:"A", q19:"A", q20:"A",
-q21:"A", q22:"A", q23:"A", q24:"A", q25:"A", q26:"A", q27:"A", q28:"A", q29:"A", q30:"A"
-};
-
-function checkScore() {
-let score = 0;
-let total = Object.keys(answers).length;
-for (let q in answers) {
-  const userAnswer = document.querySelector(`input[name=${q}]:checked`);
-  if (userAnswer && userAnswer.value === answers[q]) score++;
-}
-document.getElementById('score').style.display='block';
-document.getElementById('score').innerHTML = `<strong>Score: ${score} / ${total}</strong>`;
-showAnswerKey();
-}
-
-function showAnswerKey() {
-let keyHTML = '<h3>Answer Key:</h3><ul>';
-for (let q in answers) {
-  keyHTML += `<li>${q.toUpperCase()}: ${answers[q]}</li>`;
-}
-keyHTML += '</ul>';
-document.getElementById('answerKey').style.display='block';
-document.getElementById('answerKey').innerHTML = keyHTML;
-}
-
-function tryAgain() {
-document.getElementById('quizForm').reset();
-document.getElementById('score').style.display='none';
-document.getElementById('answerKey').style.display='none';
-}
-</script>
 </body>
 </html>
